@@ -1,5 +1,4 @@
-﻿
-function SelectionSort() {
+﻿function SelectionSort() {
 
     var arr = document.getElementById('inputArr').value.split(',');
     document.getElementsByTagName('pre')[0].innerText = ''
@@ -24,6 +23,12 @@ function SelectionSort() {
     }
 }
 
+function Swap(a,b)
+{
+    temp =a;
+    a=b;
+    b=temp;
+}
 function BubbleSort() {
 
     var arr = document.getElementById('inputArr').value.split(',');
@@ -66,4 +71,22 @@ function InsertionSort() {
         document.getElementsByTagName('pre')[0].innerText += arr + '\n';
                 
     }
+}
+
+function QuickSort() {
+
+    var arr = document.getElementById('inputArr').value.split(',');
+    document.getElementsByTagName('pre')[0].innerText = ''
+
+    // main logic starts from here
+   var low,high;
+   low= arr[0];
+   high = arr[arr.length];
+   for(i=0;i<arr.length;i++)
+        {
+           if(arr[i]>arr[i+1])
+            Swap(arr[i],arr[i+1])
+
+
+        }    
 }
